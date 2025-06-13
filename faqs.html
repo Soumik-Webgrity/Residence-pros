@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="./assets/js/app.js"></script>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Jquery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Phone menu -->
+    <link rel="stylesheet" href="./assets/menu/nav.css">
+    <script src="./assets/menu/bootstrap.bundle.min.js"></script>
+    <script src="./assets/menu/nav.js"></script>
+
+    <!-- Fontawsome  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+    <title>FAQs - Residences Pros</title>
+</head>
+
+<body>
+    <header class="myHeader fixed-top d-none d-lg-flex">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <a href="/index.html"><img src="./assets/images/logo.png" alt=""></a>
+                </div>
+                <div class="col-md-9">
+                    <ul class="navbar">
+                        <li><a href="./index.html" class="navA">Home</a></li>
+                        <li><a href="./about.html" class="navA">About Us</a></li>
+                        <li><a href="./properties-list.html" class="navA">Properties</a></li>
+                        <li><a href="./faqs.html" class="navA active">FAQs</a></li>
+                        <li><a href="./blog.html" class="navA">Blog</a></li>
+                        <li><a href="./contact.html" class="navA">Contact Us</a></li>
+                        <li><a href="./login.html" class="loginbtn"><i class="fa-regular fa-user"></i></a></li>
+                        <li><button class="button1">Add Property</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile navbar -->
+
+    <header id="masthead2" class="fixed-top d-flex d-lg-none">
+        <div class="phone-nav d-flex d-lg-none position-reltive w-100 px-3">
+            <div class="d-flex align-items-center w-100">
+                <div class="eader-logo-phone">
+                    <div class="logo-wrapper">
+                        <a href="/index.html"><img src="./assets/images/logo.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="header-nav flex-grow-1">
+                    <li><a href="./login.html" class="loginbtn"><i class="fa-regular fa-user"></i></a></li>
+                    <div id="swipe_overlay"></div>
+                    <div id="swipeNav">
+                        <div class="pull_nav_close text-center">
+                            <a href="javascript:void(0);" id="closeBtn" class="pull-close-nav">
+                                <span class="n"></span>
+                                <span class="g"></span>
+                                <span class="s"></span>
+                            </a>
+                        </div>
+                        <div id="main_nav" class="main_nav">
+                            <ul class="navbar">
+                                <li><a href="./index.html" class="navA">Home</a></li>
+                                <li><a href="./about.html" class="navA">About Us</a></li>
+                                <li><a href="./properties-list.html" class="navA">Properties</a></li>
+                                <li><a href="./faqs.html" class="navA active">FAQs</a></li>
+                                <li><a href="./blog.html" class="navA">Blog</a></li>
+                                <li><a href="./contact.html" class="navA">Contact Us</a></li>
+                                <li><button class="button1">Add Property</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pull_nav" class="d-flex">
+                    <a id="menuBtn" class="pull-nav">
+                        <span class="n"></span>
+                        <span class="g"></span>
+                        <span class="s"></span>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+
+    <!-- Banner section -->
+
+
+    <section class="about_banner">
+        <div class="container px-3 px-md-0">
+            <div class="hero-content">
+                <h1 class="banner_heading weavy-text">Frequently Asked Questions</h1>
+                <p class="mb-5 banner_subheading weavy-word-text">Home | FAQs</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Accordion section -->
+
+    <section class="faq-section py-5">
+        <div class="container py-md-5">
+            <div class="row">
+
+                <!-- FAQ Content -->
+                <div class="col-lg-8 mb-5">
+                    <div class="accordion custom-faq-accordion" id="faqAccordion">
+
+                        <!-- Accordion Item 1 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading1">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                                    aria-expanded="false" aria-controls="collapse1">
+                                    <span>There are many variations of passages of Lorem Ipsum?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 2 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading2">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                                    aria-expanded="false" aria-controls="collapse2">
+                                    <span>It is a long established fact: that a reader will be distracted?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 3 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading3">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                                    aria-expanded="false" aria-controls="collapse3">
+                                    <span>Various versions have evolved over the years, sometimes by accident?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 4 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading4">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
+                                    aria-expanded="false" aria-controls="collapse4">
+                                    <span>All the Lorem Ipsum generators on the Internet?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 5 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading5">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse5"
+                                    aria-expanded="false" aria-controls="collapse5">
+                                    <span>It uses a dictionary of over 200 Latin words?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 6 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading6">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse6"
+                                    aria-expanded="false" aria-controls="collapse6">
+                                    <span>Contrary to popular belief, Lorem Ipsum is not simply random text?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 7 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading7">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse7"
+                                    aria-expanded="false" aria-controls="collapse7">
+                                    <span>Many desktop publishing packages and web page editors?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 8 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading8">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse8"
+                                    aria-expanded="false" aria-controls="collapse8">
+                                    <span>They vary in complexity?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 9 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading9">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse9"
+                                    aria-expanded="false" aria-controls="collapse9">
+                                    <span>It avoids repetition and awkward phrases?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion Item 10 -->
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="heading10">
+                                <button
+                                    class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapse10"
+                                    aria-expanded="false" aria-controls="collapse10">
+                                    <span>Right. It’s based on a 1st-century BC Latin text?</span>
+                                    <i class="fa-solid fa-angle-right ms-auto faq-arrow-icon"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum odio
+                                    ligula, at dapibus dolor placerat quis. Sed congue efficitur libero, sit amet
+                                    tristique ipsum. Vivamus consectetur mauris nec sodales feugiat. Ut tempor tristique
+                                    nisi a placerat. Curabitur massa felis, posuere et placerat vel, ultricies nec
+                                    sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Sed vehicula turpis at tortor auctor blandit. Vestibulum mollis
+                                    imperdiet justo eleifend consequat. Vestibulum eget dapibus metus, eu elementum
+                                    neque. Etiam ut sem et metus vestibulum ornare. Duis in nunc nulla. In vestibulum
+                                    congue nunc, sed ornare nulla tincidunt eget. Vivamus imperdiet magna nec arcu
+                                    ornare, eget vulputate metus porta. Donec rhoncus pharetra elementum. Morbi
+                                    condimentum velit nec enim pellentesque, et mollis arcu volutpat. Cras lacus tortor,
+                                    mattis at elit non, maximus maximus lacus.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Sidebar Ads -->
+                <div class="col-lg-4">
+                    <div class="faq-sidebar px-4">
+                        <div class="add-banner mb-4">
+                            <img src="./assets/images/300-600.png" class="img-fluid shadow-sm" alt="Ad 300x600">
+                        </div>
+                        <div class="add-banner">
+                            <img src="./assets/images/300-250.png" class="img-fluid shadow-sm" alt="Ad 300x250">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer section -->
+    <footer class="custom-footer pt-5 pb-3">
+        <div class="container">
+            <div class="row gy-4 gx-5">
+                <!-- Logo & Contact -->
+                <div class="col-md-4 col-6">
+                    <div class="footer-logo mb-4">
+                        <a href="./index.html"><img src="./assets/images/logo-white.png" alt="Residences Pros Logo"
+                                class="footer-logo-img"></a>
+                    </div>
+                    <ul class="footer-contact list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <span class="icon_holder"><i class="fa-solid fa-phone-volume"></i></span>
+                            <span class="ms-2"><a href="tel:+1 012 345 6789">+1 012 345 6789</a></span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3 mb-md-5">
+                            <span class="icon_holder"><i class="fa-solid fa-envelope"></i></span>
+                            <span class="ms-2"><a href="mailto:abc@emailid.com">abc@emailid.com</a></span>
+                        </li>
+                    </ul>
+                    <button class="add-property-btn button1">
+                        Add Property
+                    </button>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 col-6">
+                    <h5 class="footer-heading mb-3">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="./index.html" class="navA">Home</a></li>
+                        <li><a href="./about.html" class="navA">About Us</a></li>
+                        <li><a href="./properties-list.html" class="navA">Properties</a></li>
+                        <li><a href="./faqs.html" class="navA active">FAQs</a></li>
+                        <li><a href="./blog.html" class="navA">Blog</a></li>
+                        <li><a href="./contact.html" class="navA">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Other Links -->
+                <div class="col-md-3 col-6">
+                    <h5 class="footer-heading mb-3">Other Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-2 col-6">
+                    <h5 class="footer-heading mb-3">Follow Us</h5>
+                    <ul class="list-unstyled footer-social">
+                        <li class="mb-3">
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="icon_holder"><i class="fa-brands fa-facebook-f"></i></span>
+                                <span class="ms-2">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="icon_holder"><i class="fa-brands fa-instagram"></i></span>
+                                <span class="ms-2">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="icon_holder"><i class="fa-brands fa-linkedin-in"></i></span>
+                                <span class="ms-2">LinkedIn</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Bottom Footer -->
+        <section class="copyright_section mt-5">
+            <div class="container">
+                <div class="row mt-4 pb-2  align-items-center">
+                    <div class="col-md-6 text-center text-md-start footer-copyright mb-3 mb-md-0">
+                        &copy; <span id="year"></span> <a href="./index.html">Residences Pros</a> - All Rights Reserved.
+                    </div>
+                    <div
+                        class="col-md-6  text-center text-md-end d-flex justify-content-md-end justify-content-center gap-2">
+                        <img src="./assets/images/visa.png" alt="Visa" class="payment-icon">
+                        <img src="./assets/images/mastercard.png" alt="MasterCard" class="payment-icon">
+                        <img src="./assets/images/amex.png" alt="American Express" class="payment-icon">
+                        <img src="./assets/images/discover.png" alt="Discover" class="payment-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+    </footer>
+</body>
+
+</html>

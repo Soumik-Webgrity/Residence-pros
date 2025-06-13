@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="./assets/js/app.js"></script>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Jquery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Phone menu -->
+    <link rel="stylesheet" href="./assets/menu/nav.css">
+    <script src="./assets/menu/bootstrap.bundle.min.js"></script>
+    <script src="./assets/menu/nav.js"></script>
+
+    <!-- Fontawsome  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+    <title>Residences Pros</title>
+</head>
+
+<body>
+    <header class="myHeader fixed-top d-none d-lg-flex">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <a href="/index.html"><img src="./assets/images/logo.png" alt=""></a>
+                </div>
+                <div class="col-md-9">
+                    <ul class="navbar">
+                        <li><a href="./index.html" class="navA">Home</a></li>
+                        <li><a href="./about.html" class="navA">About Us</a></li>
+                        <li><a href="./properties.html" class="navA">Properties</a></li>
+                        <li><a href="./faqs.html" class="navA">FAQs</a></li>
+                        <li><a href="./blog.html" class="navA">Blog</a></li>
+                        <li><a href="./contact.html" class="navA">Contact Us</a></li>
+                        <li><a href="#" class="loginbtn" data-bs-toggle="modal" data-bs-target="#authModal"><i
+                                    class="fa-regular fa-user"></i></a></li>
+                        <li><button class="button1">Add Property</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile navbar -->
+
+    <header id="masthead2" class="fixed-top d-flex d-lg-none">
+        <div class="phone-nav d-flex d-lg-none position-reltive w-100 px-3">
+            <div class="d-flex align-items-center w-100">
+                <div class="eader-logo-phone">
+                    <div class="logo-wrapper">
+                        <a href="/index.html"><img src="./assets/images/logo.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="header-nav flex-grow-1">
+                    <li><a href="#" class="loginbtn" data-bs-toggle="modal" data-bs-target="#authModal"><i
+                                class="fa-regular fa-user"></i></a></li>
+                    <div id="swipe_overlay"></div>
+                    <div id="swipeNav">
+                        <div class="pull_nav_close text-center">
+                            <a href="javascript:void(0);" id="closeBtn" class="pull-close-nav">
+                                <span class="n"></span>
+                                <span class="g"></span>
+                                <span class="s"></span>
+                            </a>
+                        </div>
+                        <div id="main_nav" class="main_nav">
+                            <ul class="navbar">
+                                <li><a href="./index.html" class="navA">Home</a></li>
+                                <li><a href="./about.html" class="navA">About Us</a></li>
+                                <li><a href="./properties.html" class="navA">Properties</a></li>
+                                <li><a href="./faqs.html" class="navA">FAQs</a></li>
+                                <li><a href="./blog.html" class="navA">Blog</a></li>
+                                <li><a href="./contact.html" class="navA">Contact Us</a></li>
+                                <li><a href="./addprop.html"><button class="button1">Add Property</button></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pull_nav" class="d-flex">
+                    <a id="menuBtn" class="pull-nav">
+                        <span class="n"></span>
+                        <span class="g"></span>
+                        <span class="s"></span>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+
+    <!-- Add property section -->
+
+    <div class="container pt-3 pb-5 py-md-5 px-3 px-md-0 add-property-page">
+        <h2 class="addprop_heading mb-4">Add New Property</h2>
+
+        <form class="property-form">
+
+            <!-- Property City -->
+            <div class="mb-3">
+                <label class="form-label">Property Caption *</label>
+                <input type="text" class="form-control" placeholder="Eg: Banjara Hills, Jubilee Hills, etc">
+            </div>
+
+            <!-- Residential Type -->
+            <div class="row mb-4 g-3 align-items-center">
+
+                <!-- Select Type -->
+                <div class="col-12 col-md-6">
+                    <label class="form-label">Residential Type *</label>
+                    <select class="form-select">
+                        <option selected>Select Type</option>
+                        <option>Flat</option>
+                        <option>House</option>
+                        <option>Villa</option>
+                        <option>Plot</option>
+                        <option>Farm Land</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <!-- Buy/Rent Radio Buttons -->
+                <div class="col-12 col-md-6">
+                    <!-- Radio Buttons (full width on this row) -->
+                    <div class="mb-3">
+                        <div class="d-flex gap-5 align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="residential_option" id="buy"
+                                    value="buy">
+                                <label class="form-check-label" for="buy">BUY</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="residential_option" id="rent"
+                                    value="rent">
+                                <label class="form-check-label" for="rent">RENT</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price and Select Side by Side -->
+                    <div class="row g-2">
+                        <div class="col-12 col-md-6">
+                            <input type="text" class="form-control" placeholder="$">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <select class="form-select">
+                                <option selected>Select Type</option>
+                                <option>Year</option>
+                                <option>Month</option>
+                                <option>Day</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <!-- Property Details -->
+            <label class="mb-3 form-label">Property Details</label>
+            <div class="row g-3 mb-3 prop_details">
+                <div class="col-md-12">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" id="address" class="form-control" placeholder="Enter Address">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" id="city" class="form-control" placeholder="City">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="state" class="form-label">State</label>
+                    <input type="text" id="state" class="form-control" placeholder="State">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" id="country" class="form-control" placeholder="Country">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="zip" class="form-label">Zip Code</label>
+                    <input type="text" id="zip" class="form-control" placeholder="Zip">
+                </div>
+                <div class="row g-3 mb-3 mb-md-5">
+                    <div class="col-md-6">
+                        <label for="nearby" class="form-label">Nearby Places</label>
+                        <input type="text" id="nearby" class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="distance" class="form-label">Distance</label>
+                        <div
+                            class="custom-distance-box d-flex align-items-center justify-content-between px-3 py-2 mb-3">
+                            <input type="number" class="form-control border-0 shadow-none p-0" placeholder="0">
+                            <select class="form-select border-0 shadow-none p-0 text-center">
+                                <option selected>Kilometers</option>
+                                <option>Miles</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-0 mb-3">
+                        <input type="text" id="nearby" class="form-control">
+                    </div>
+
+                    <div class="col-md-6 mt-0">
+                        <div
+                            class="custom-distance-box d-flex align-items-center justify-content-between px-3 py-2 mb-3">
+                            <input type="number" class="form-control border-0 shadow-none p-0" placeholder="0">
+                            <select class="form-select border-0 shadow-none p-0 text-center">
+                                <option selected>Kilometers</option>
+                                <option>Miles</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-md-end justify-content-center">
+                        <button type="button" class="button2"><i class="fa-solid fa-plus"></i> Add Row</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row g-3 mb-3 prop_details">
+                <div class="col-md-6">
+                    <div class="row g-2">
+                        <label for="distance" class="form-label">Surface Area *</label>
+                        <div class="col-md-6">
+                            <select class="form-select">
+                                <option>2400</option>
+                                <option>2500</option>
+                                <option>2800</option>
+                                <option>3000</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-select">
+                                <option>Sq Ft</option>
+                                <option>Sq Yards</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row g-2">
+                        <label for="distance" class="form-label">Plot Size *</label>
+                        <div class="col-md-6">
+                            <select class="form-select">
+                                <option>60</option>
+                                <option>80</option>
+                                <option>120</option>
+                                <option>150</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-select">
+                                <option>Accrs</option>
+                                <option>Sq Yards</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row g-2">
+                        <!-- Bedrooms -->
+                        <div class="col-md-6">
+                            <label class="form-label">Bedrooms *</label>
+                            <div class="counter-box d-flex align-items-center justify-content-between border">
+                                <button class="counter-btn" type="button" onclick="decrement('bedrooms')">-</button>
+                                <span id="bedrooms" class="counter-value">0</span>
+                                <button class="counter-btn-right" type="button"
+                                    onclick="increment('bedrooms')">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Bathrooms -->
+                        <div class="col-md-6">
+                            <label class="form-label">Bathrooms *</label>
+                            <div class="counter-box d-flex align-items-center justify-content-between border">
+                                <button class="counter-btn" type="button" onclick="decrement('bathrooms')">-</button>
+                                <span id="bathrooms" class="counter-value">0</span>
+                                <button class="counter-btn-right" type="button"
+                                    onclick="increment('bathrooms')">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="row g-2">
+                        <label for="distance" class="form-label">Property Condition *</label>
+                        <div class="col-md-12 mt-0">
+                            <select class="form-select">
+                                <option selected>Furnished</option>
+                                <option>Unfurnished</option>
+                                <option>Semi Furnished</option>
+                                <option>Fully Furnished</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row g-2">
+                        <label for="distance" class="form-label">Property Age *</label>
+                        <div class="col-md-12 mt-0">
+                            <select class="form-select">
+                                <option selected>0-5 Years</option>
+                                <option>5-10 Years</option>
+                                <option>10-15 Years</option>
+                                <option>15-20 Years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="distance" class="form-label">Property Available From *</label>
+                    <div class="row g-2">
+                        <div class="col-md-6 mt-2">
+                            <select class="form-select">
+                                <option selected>Select month</option>
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <select class="form-select">
+                                <option selected>Select year</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                <option>2025</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amenities -->
+                <h5 class="mb-2 mt-4 form-label">Amenities *</h5>
+                <div class="row g-2 mb-4 amenities-list">
+                    <!-- Loop this for each amenity -->
+                    <div class="col-6 col-md-3">
+                        <div class="form-check ">
+                            <input class="form-check-input" type="checkbox" id="lift">
+                            <label class="form-check-label" for="lift">Lift</label>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="form-check ">
+                            <input class="form-check-input" type="checkbox" id="parking">
+                            <label class="form-check-label" for="parking">Car Parking</label>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="security"><label
+                                class="form-check-label" for="security">24x7 Security</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="power"><label
+                                class="form-check-label" for="power">Power Backup</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="gym"><label
+                                class="form-check-label" for="gym">Gym</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="pool"><label
+                                class="form-check-label" for="pool">Swimming Pool</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="club"><label
+                                class="form-check-label" for="club">Club House</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="garden"><label
+                                class="form-check-label" for="garden">Garden</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="intercom"><label
+                                class="form-check-label" for="intercom">Intercom</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="wifi"><label
+                                class="form-check-label" for="wifi">WiFi</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="fire"><label
+                                class="form-check-label" for="fire">Fire Safety</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="cctv"><label
+                                class="form-check-label" for="cctv">CCTV</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="play"><label
+                                class="form-check-label" for="play">Play Area</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="community"><label
+                                class="form-check-label" for="community">Community Hall</label>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="indoor"><label
+                                class="form-check-label" for="indoor">Indoor Games</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="water"><label
+                                class="form-check-label" for="water">24x7 Water</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="maintenance"><label
+                                class="form-check-label" for="maintenance">Maintenance
+                                Staff</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="rainwater"><label
+                                class="form-check-label" for="rainwater">Rainwater
+                                Harvesting</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="ro"><label
+                                class="form-check-label" for="ro">RO Water</label></div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="form-check "><input class="form-check-input" type="checkbox" id="solar"><label
+                                class="form-check-label" for="solar">Solar Panels</label></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Description -->
+            <div class="mb-4">
+                <label class="form-label">Description</label>
+                <p for="desc" class="about-prop mb-2 mb-md-4">Write About the Property *</p>
+                <textarea id="desc" class="form-control" rows="6"></textarea>
+            </div>
+
+            <!-- Floor Plan Upload -->
+            <div class="mb-4">
+                <label class="form-label">Floor Plan <span>(Optional)</span></label>
+                <p class="about-prop mb-2 mb-md-4">Maximum 10 photos. 2 MB each. (File supported .jpg, .jpeg, .pdf)</p>
+
+                <div class="upload-box p-4 text-center cursor-pointer" id="floorUploadBox">
+                    <img src="./assets/images/upload-image.png" alt="upload-image" class="img-fluid">
+                    <p class="mb-1">Click to upload floor plan</p>
+                    <input type="file" class="form-control-file d-none" id="floorInput" accept=".jpg,.jpeg,.pdf">
+                </div>
+            </div>
+
+            <!-- Property Photos Upload -->
+            <div class="mb-4">
+                <label class="form-label">Property Photos</label>
+                <p class="about-prop mb-2 mb-md-4">Maximum 10 photos. 2 MB each. (File supported .jpg, .jpeg.)</p>
+
+                <div class="upload-box p-4 text-center cursor-pointer" id="photoUploadBox">
+                    <img src="./assets/images/upload-image.png" alt="upload-image" class="img-fluid">
+                    <p class="mb-1">Upload property images (max 20MB)</p>
+                    <input type="file" multiple class="form-control-file d-none" id="photoInput" accept=".jpg,.jpeg">
+                </div>
+            </div>
+
+
+            <!-- Submit Buttons -->
+            <div class="text-center prop_button_section">
+                <button type="submit" class="button1 me-2 mb-3 mb-md-0">Save as Draft</button>
+                <button type="submit" class="button2">Publish</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer section -->
+    <footer class="custom-footer pt-5 pb-3">
+        <div class="container">
+            <div class="row gy-4 gx-5">
+                <!-- Logo & Contact -->
+                <div class="col-md-4 col-6">
+                    <div class="footer-logo mb-4">
+                        <a href="./index.html"><img src="./assets/images/logo-white.png" alt="Residences Pros Logo"
+                                class="footer-logo-img"></a>
+                    </div>
+                    <ul class="footer-contact list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <span class="icon_holder"><i class="fa-solid fa-phone-volume"></i></span>
+                            <span class="ms-2"><a href="tel:+1 012 345 6789">+1 012 345 6789</a></span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3 mb-md-5">
+                            <span class="icon_holder"><i class="fa-solid fa-envelope"></i></span>
+                            <span class="ms-2"><a href="mailto:abc@emailid.com">abc@emailid.com</a></span>
+                        </li>
+                    </ul>
+                    <button class="add-property-btn button1">
+                        Add Property
+                    </button>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 col-6">
+                    <h5 class="footer-heading mb-3">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="./index.html" class="navA">Home</a></li>
+                        <li><a href="./about.html" class="navA">About Us</a></li>
+                        <li><a href="./properties.html" class="navA">Properties</a></li>
+                        <li><a href="./faqs.html" class="navA">FAQs</a></li>
+                        <li><a href="./blog.html" class="navA">Blog</a></li>
+                        <li><a href="./contact.html" class="navA">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Other Links -->
+                <div class="col-md-3 col-6">
+                    <h5 class="footer-heading mb-3">Other Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-2 col-6">
+                    <h5 class="footer-heading mb-3">Follow Us</h5>
+                    <ul class="list-unstyled footer-social">
+                        <li class="mb-3">
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="icon_holder"><i class="fa-brands fa-facebook-f"></i></span>
+                                <span class="ms-2">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="icon_holder"><i class="fa-brands fa-instagram"></i></span>
+                                <span class="ms-2">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="icon_holder"><i class="fa-brands fa-linkedin-in"></i></span>
+                                <span class="ms-2">LinkedIn</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Bottom Footer -->
+        <section class="copyright_section mt-5">
+            <div class="container">
+                <div class="row mt-4 pb-2  align-items-center">
+                    <div class="col-md-6 text-center text-md-start footer-copyright mb-3 mb-md-0">
+                        &copy; <span id="year"></span> <a href="./index.html">Residences Pros</a> - All Rights Reserved.
+                    </div>
+                    <div
+                        class="col-md-6  text-center text-md-end d-flex justify-content-md-end justify-content-center gap-2">
+                        <img src="./assets/images/visa.png" alt="Visa" class="payment-icon">
+                        <img src="./assets/images/mastercard.png" alt="MasterCard" class="payment-icon">
+                        <img src="./assets/images/amex.png" alt="American Express" class="payment-icon">
+                        <img src="./assets/images/discover.png" alt="Discover" class="payment-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+    </footer>
+
+</body>
+
+</html>

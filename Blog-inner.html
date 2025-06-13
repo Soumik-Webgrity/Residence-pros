@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="./assets/js/app.js"></script>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+    <!-- Jquery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Phone menu -->
+    <link rel="stylesheet" href="./assets/menu/nav.css">
+    <script src="./assets/menu/bootstrap.bundle.min.js"></script>
+    <script src="./assets/menu/nav.js"></script>
+
+    <!-- Fontawsome  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+    <title>Blog Details - Residences Pros</title>
+</head>
+
+<body>
+    <header class="myHeader fixed-top d-none d-lg-flex">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <a href="/index.html"><img src="./assets/images/logo.png" alt=""></a>
+                </div>
+                <div class="col-md-9">
+                    <ul class="navbar">
+                        <li><a href="./index.html" class="navA ">Home</a></li>
+                        <li><a href="./about.html" class="navA">About Us</a></li>
+                        <li><a href="./properties-list.html" class="navA">Properties</a></li>
+                        <li><a href="./faqs.html" class="navA">FAQs</a></li>
+                        <li><a href="./blog.html" class="navA active">Blog</a></li>
+                        <li><a href="./contact.html" class="navA">Contact Us</a></li>
+                        <li><a href="#" class="loginbtn" data-bs-toggle="modal" data-bs-target="#authModal"><i
+                                    class="fa-regular fa-user"></i></a></li>
+                        <li><a href="./addprop.html"><button class="button1">Add Property</button></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile navbar -->
+
+    <header id="masthead2" class="fixed-top d-flex d-lg-none">
+        <div class="phone-nav d-flex d-lg-none position-reltive w-100 px-3">
+            <div class="d-flex align-items-center w-100">
+                <div class="eader-logo-phone">
+                    <div class="logo-wrapper">
+                        <a href="/index.html"><img src="./assets/images/logo.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="header-nav flex-grow-1">
+                    <li><a href="#" class="loginbtn" data-bs-toggle="modal" data-bs-target="#authModal"><i
+                                class="fa-regular fa-user"></i></a></li>
+                    <div id="swipe_overlay"></div>
+                    <div id="swipeNav">
+                        <div class="pull_nav_close text-center">
+                            <a href="javascript:void(0);" id="closeBtn" class="pull-close-nav">
+                                <span class="n"></span>
+                                <span class="g"></span>
+                                <span class="s"></span>
+                            </a>
+                        </div>
+                        <div id="main_nav" class="main_nav">
+                            <ul class="navbar">
+                                <li><a href="./index.html" class="navA">Home</a></li>
+                                <li><a href="./about.html" class="navA">About Us</a></li>
+                                <li><a href="./properties-list.html" class="navA">Properties</a></li>
+                                <li><a href="./faqs.html" class="navA">FAQs</a></li>
+                                <li><a href="./blog.html" class="navA active">Blog</a></li>
+                                <li><a href="./contact.html" class="navA">Contact Us</a></li>
+                                <li><button class="button1">Add Property</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pull_nav" class="d-flex">
+                    <a id="menuBtn" class="pull-nav">
+                        <span class="n"></span>
+                        <span class="g"></span>
+                        <span class="s"></span>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </header>
+
+    <!-- Blog Inner section -->
+
+    <section class="featured_property py-md-5 px-3 px-md-0">
+        <!-- Card container -->
+        <div class="container-fluid pt-5 card-container">
+            <div class="row g-5 px-2 px-md-5">
+                <div class="blog_breadcrumbs pb-md-5 px-md-5 d-flex align-items-center">
+                    <div class="blog_breadcrumbs">Home | Blog | All the Lorem Ipsum generators on the Internet tend to
+                        repeat</div>
+                </div>
+                <!-- Left: Blog Posts (4 Max) -->
+                <div class="col-lg-9 px-2">
+
+                    <div class="prop_heading_section pb-5 px-md-5 d-flex justify-content-between align-items-center">
+                        <div class="blog_heading">All the Lorem Ipsum generators on the
+                            Internet tend to repeat</div>
+                    </div>
+                    <!-- Post 1 -->
+                    <div class="post1 pb-md-5 px-md-5 m-0">
+                        <!-- Post Meta -->
+                        <div class="post-meta d-flex align-items-center gap-3 mb-4">
+                            <span><i class="fa-solid fa-calendar-days me-1"></i> May 09, 2025</span>|
+                            <span>Posted by: Admin</span>
+                        </div>
+                        <!-- Post Header Image -->
+                        <div class="blog_inner_img mb-4 overflow-hidden">
+                            <img src="./assets/images/blog-inner.jpg" alt="Post Banner" class="img-fluid w-100">
+                        </div>
+
+                        <!-- Post categories section -->
+                        <div class="post-categories d-flex align-items-center gap-2 gap-lg-3 mb-4 flex-wrap">
+                            <span>Category1</span>
+                            <span>Category5</span>
+                            <span>Category6</span>
+                        </div>
+
+
+                        <!-- Post Title -->
+                        <h1 class="post-title mb-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                            veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h1>
+
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <p>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque
+                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                                et quasi architecto
+                                beatae vitae dicta sunt explicabo.
+                            </p>
+                            <p>
+                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                sed quia
+                                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                            </p>
+                            <blockquote class="blockquote px-4 py-3 my-4 border-start border-4 border-primary bg-light">
+                                <p class="mb-0 fst-italic">"But I must explain to you how all this mistaken
+                                    idea of denouncing
+                                    pleasure and praising pain was born..."</p>
+                            </blockquote>
+                            <p>
+                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                praesentium voluptatum
+                                deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                                occaecati cupiditate non
+                                provident.
+                            </p>
+
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                        </div>
+
+                        <!-- Like share section-->
+
+                        <div class="share_like_section d-flex align-items-center gap-3 py-3">
+                            <div class="icon_box" data-toggle="tooltip" data-placement="left" title="Share">
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                            <div class="icon_box" data-toggle="tooltip" data-placement="right" title="Like">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                            </div>
+                        </div>
+
+                        <!-- prev next button -->
+
+                        <div class="prev_next_section d-flex justify-content-between align-items-center gap-3 py-3 mb-3">
+                            <span><i class="fa-solid fa-angle-left"></i> PREV POST</span>
+                            <span>NEXT POST <i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+
+                        <!-- Comment Box -->
+                        <div class="card p-5 my-lg-5 comment_box">
+                            <h4 class="comment_heading mb-4">Add a Comment</h4>
+                            <form>
+                                <div class="row mb-3 g-4">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Name*" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="Email*" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" placeholder="Write your comments here..."
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="button2 submit_btn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Sidebar -->
+                <div class="col-lg-3">
+                    <!-- Search Box -->
+                    <div class="mb-4 p-3 search_box">
+                        <form role="search" method="get" class="search-wrapper" action="#">
+                            <input type="search" class="form-control search-input" placeholder="Search…" value=""
+                                name="s" aria-label="Search">
+                            <button type="submit" class="search_icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Recent Posts -->
+                    <div class="mb-4 p-3 post_box">
+                        <h4 class="mb-5 recent_posts">Recent Posts</h4>
+                        <ul class="">
+                            <li class="mb-2">
+                                <a href="#" class="each_post text-decoration-none">All the Lorem Ipsum generators on
+                                    the...</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="each_post text-decoration-none">All the Lorem Ipsum generators on
+                                    the...</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="each_post text-decoration-none">How to Use This
+                                    Feature</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="each_post text-decoration-none">All the Lorem Ipsum generators on
+                                    the...</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="each_post text-decoration-none">All the Lorem Ipsum generators on
+                                    the...</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Add -->
+                    <div class="add-banner text-center my-5">
+                        <img src="./assets/images/300-250.png" class="img-fluid shadow-sm" alt="Ad 300x250">
+                    </div>
+
+                    <!-- Archive Dropdown -->
+                    <div class="mb-4 p-5 archive_section select-wrapper">
+                        <h4 class="mb-5 archive_heading">Archive</h4>
+                        <form action="#" method="get">
+                            <select name="m" class="form-select" onchange="this.form.submit()">
+                                <option value="">Select Month</option>
+                                <option value="202506">June 2025</option>
+                                <option value="202505">May 2025</option>
+                                <option value="202504">April 2025</option>
+                                <option value="202503">March 2025</option>
+                                <option value="202502">February 2025</option>
+                                <option value="202501">January 2025</option>
+                                <option value="202412">December 2024</option>
+                                <option value="202411">November 2024</option>
+                                <option value="202410">October 2024</option>
+                                <option value="202409">September 2024</option>
+                                <option value="202408">August 2024</option>
+                                <option value="202407">July 2024</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <!-- Category Dropdown -->
+                    <div class="mb-4 p-5 category_section select-wrapper">
+                        <h4 class="mb-5 archive_heading">Categories</h4>
+                        <select name="cat_dropdown" class="form-select category-dropdown">
+                            <option value="">Select Category</option>
+                            <option value="1">News</option>
+                            <option value="2">Updates</option>
+                            <option value="3">Tips & Tricks</option>
+                            <option value="4">Events</option>
+                            <option value="5">Guides</option>
+                            <option value="6">Tutorials</option>
+                            <option value="7">Announcements</option>
+                            <option value="8">Legal Advice</option>
+                            <option value="9">Real Estate</option>
+                            <option value="10">Personal Injury</option>
+                        </select>
+                    </div>
+
+                    <!-- Add -->
+                    <div class="add-banner text-center my-5">
+                        <img src="./assets/images/300-250.png" class="img-fluid shadow-sm" alt="Ad 300x250">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Footer section -->
+    <footer class="custom-footer pt-5 pb-3">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Logo & Contact -->
+                <div class="col-lg-4 col-6">
+                    <div class="footer-logo mb-4">
+                        <a href="./index.html"><img src="./assets/images/logo-white.png" alt="Residences Pros Logo"
+                                class="footer-logo-img"></a>
+                    </div>
+                    <ul class="footer-contact list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                            <span class="icon_holder"><i class="fa-solid fa-phone-volume"></i></span>
+                            <span class="ms-2"><a href="tel:+1 012 345 6789">+1 012 345 6789</a></span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3 mb-md-5">
+                            <span class="icon_holder"><i class="fa-solid fa-envelope"></i></span>
+                            <span class="ms-2"><a href="mailto:abc@emailid.com">abc@emailid.com</a></span>
+                        </li>
+                    </ul>
+                    <a href="./addprop.html"><button class="button1 add-property-btn">Add Property</button></a>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-6">
+                    <h5 class="footer-heading mb-3">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="./index.html" class="navA active">Home</a></li>
+                        <li><a href="./about.html" class="navA">About Us</a></li>
+                        <li><a href="./properties-list.html" class="navA">Properties</a></li>
+                        <li><a href="./faqs.html" class="navA">FAQs</a></li>
+                        <li><a href="./blog.html" class="navA">Blog</a></li>
+                        <li><a href="./contact.html" class="navA">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Other Links -->
+                <div class="col-lg-3 col-6">
+                    <h5 class="footer-heading mb-3">Other Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-lg-2 col-6">
+                    <h5 class="footer-heading mb-3">Follow Us</h5>
+                    <ul class="list-unstyled footer-social">
+                        <li class="mb-3">
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="icon_holder"><i class="fa-brands fa-facebook-f"></i></span>
+                                <span class="ms-2">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="icon_holder"><i class="fa-brands fa-instagram"></i></span>
+                                <span class="ms-2">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center">
+                                <span class="icon_holder"><i class="fa-brands fa-linkedin-in"></i></span>
+                                <span class="ms-2">LinkedIn</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Bottom Footer -->
+        <section class="copyright_section mt-5">
+            <div class="container">
+                <div class="row mt-4 pb-2  align-items-center">
+                    <div class="col-md-6 text-center text-md-start footer-copyright mb-3 mb-md-0">
+                        &copy; <span id="year"></span> <a href="./index.html">Residences Pros</a> - All Rights Reserved.
+                    </div>
+                    <div
+                        class="col-md-6  text-center text-md-end d-flex justify-content-md-end justify-content-center gap-2">
+                        <img src="./assets/images/visa.png" alt="Visa" class="payment-icon">
+                        <img src="./assets/images/mastercard.png" alt="MasterCard" class="payment-icon">
+                        <img src="./assets/images/amex.png" alt="American Express" class="payment-icon">
+                        <img src="./assets/images/discover.png" alt="Discover" class="payment-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+    </footer>
+</body>
+
+</html>
