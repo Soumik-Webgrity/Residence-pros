@@ -155,23 +155,33 @@ $(document).ready(function () {
 
 // Heart icon onlick
 document.addEventListener('DOMContentLoaded', function () {
+  // Property Fav Logic
   document.querySelectorAll('.property-fav').forEach(function (btn) {
     btn.addEventListener('click', function () {
       const icon = this.querySelector('i');
-
-      // Toggle icon style
-      icon.classList.toggle('fa-regular');
-      icon.classList.toggle('fa-solid');
-
-      // Add heartbeat animation
-      icon.classList.add('heart-animate');
-
-      // Remove the animation class after it's done (so it can re-trigger on next click)
-      setTimeout(() => {
-        icon.classList.remove('heart-animate');
-      }, 600);
+      toggleHeart(icon);
     });
   });
+
+  // Like Btn Logic
+  document.querySelectorAll('.like_btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const icon = this.querySelector('i');
+      toggleHeart(icon);
+    });
+  });
+
+  // Shared Toggle + Animation Logic
+  function toggleHeart(icon) {
+    icon.classList.toggle('fa-regular');
+    icon.classList.toggle('fa-solid');
+
+    icon.classList.add('heart-animate');
+
+    setTimeout(() => {
+      icon.classList.remove('heart-animate');
+    }, 600);
+  }
 });
 
 
@@ -210,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   let btn = document.getElementById("scrollToTopBtn");
 
-  
+
   if (window.scrollY > 100) {
     btn.style.display = "flex";
   } else {
@@ -313,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function activateToggle(activeBtn, inactiveBtn, moveRight, redirectURL) {
-    
+
     if (activeBtn.classList.contains("active") || window.location.pathname.includes(redirectURL)) {
       return;
     }
@@ -324,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
       window.location.href = redirectURL;
-    }, 500); 
+    }, 500);
   }
 
   listBtn.addEventListener("click", () => {
@@ -333,5 +343,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mapBtn.addEventListener("click", () => {
     activateToggle(mapBtn, listBtn, true, "properties-map.html");
+  });
+});
+
+
+// Prop details gallery
+
+$(document).ready(function () {
+  $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+  });
+
+  $('.slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+  nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
+    asNavFor: '.slider-for',
+    centerMode: true,
+    centerPadding: '0px', 
+    focusOnSelect: true,
+    arrows: true,
+    dots: false,
+    autoplay:true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 3 }
+      },
+      {
+        breakpoint: 576,
+        settings: { slidesToShow: 2 }
+      }
+    ]
   });
 });
