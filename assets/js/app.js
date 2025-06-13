@@ -382,3 +382,13 @@ $(document).ready(function () {
     ]
   });
 });
+
+// Tab switching fade effect
+
+const tabTriggers = document.querySelectorAll('[data-bs-toggle="tab"]');
+tabTriggers.forEach(tab => {
+  tab.addEventListener('shown.bs.tab', function (event) {
+    const targetPane = document.querySelector(event.target.dataset.bsTarget);
+    targetPane.classList.add('show');
+  });
+});
