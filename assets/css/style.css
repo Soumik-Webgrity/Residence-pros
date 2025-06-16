@@ -1944,6 +1944,7 @@ input[type=number]::-webkit-outer-spin-button {
   transition: all 0.3s ease;
   border: 1px solid transparent;
 }
+
 .sidebar-box {
   padding: 20px;
 }
@@ -1983,11 +1984,12 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: clamp(22px, 3vw, 30px);
 }
 
-.alert_box{
+.alert_box {
   border: 2px solid var(--blue);
   border-radius: 20px;
 }
-.alert_box button{
+
+.alert_box button {
   font-family: var(--semibold);
   font-size: clamp(14px, 3vw, 16px);
 }
@@ -2232,12 +2234,53 @@ input[type=number]::-webkit-outer-spin-button {
   color: #555;
 }
 
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-family: var(--semibold, sans-serif);
+  font-size: clamp(14px, 3vw, 16px);
+  color: var(--dblue);
+  border: 1px solid var(--dblue);
+  border-radius: 999px;
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn i {
+  font-size: clamp(17px, 3vw, 20px);
+}
+
+.custom-btn:hover {
+  background-color: var(--dblue);
+  color: #fff;
+}
 
 
+.enquiry_heading {
+  color: var(--blue);
+  font-size: clamp(24px, 3vw, 30px);
+  font-family: var(--semibold);
+  text-align: center;
+}
 
+.enquire-form{
+  border: 2px solid var(--blue);
+  border-radius: 15px;
+}
 
-
-
+.enquire-form input::placeholder{
+  font-family: var(--reg);
+  font-size: clamp(13px,3vw,15px);
+  color: #8c8c8c;
+}
+.enquire-form textarea{
+  resize: none;
+  border-radius: 13px !important;
+}
 
 
 
@@ -2372,7 +2415,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  z-index: 99;
+  z-index: 99999 !important;
   background: linear-gradient(135deg, #091140, #0282c8);
   color: #fff;
   border: none;
